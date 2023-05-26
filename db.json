@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "name": "Áo phông S.L.L.3.3997",
+      "price": 300,
+      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230522_g42tD5On9O.jpeg",
+      "description": "\n- Được kiểm tra hàng trước khi nhận hàng\n- Đổi hàng trong vòng 30 ngày kể từ khi nhận hàng\n- Không áp dụng đổi/trả sản phẩm trong CTKM\n- Miễn phí đổi trả nếu lỗi sai sót từ phía atino.vn",
+      "id": 2
+    },
+    {
+      "name": "Quần short R.L.1.1688",
+      "price": 230,
+      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230522_VMcAICDNnK.jpeg",
+      "description": "- Free ship cho đơn hàng trên 400,000đ.\n- Mức phí: 30,000đ nội thành và 40,000đ ngoại thành\n- Được kiểm tra hàng trước khi nhận hàng\n- Đổi hàng trong vòng 30 ngày kể từ khi nhận hàng\n- Không áp dụng đổi/trả sản phẩm trong CTKM\n- Miễn phí đổi trả nếu lỗi sai sót từ phía atino.vn",
+      "id": 3
+    },
+    {
+      "name": "Quần âu ",
+      "price": 600,
+      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230405_ODP1BPRd7f.jpeg",
+      "description": "\n- Được kiểm tra hàng trước khi nhận hàng\n- Đổi hàng trong vòng 30 ngày kể từ khi nhận hàng\n- Không áp dụng đổi/trả sản phẩm trong CTKM\n- Miễn phí đổi trả nếu lỗi sai sót từ phía atino.vn",
+      "id": 4
+    },
+    {
+      "name": "Áo Polo Cổ Đức Regular Cotton 2041",
+      "price": 379,
+      "imgurl": "https://pos.nvncdn.net/be3159-662/ps/20230520_aom2giJ2uI.jpeg",
+      "description": "Chất liệu:\n►60% Cotton mềm mại, thấm hút mồ hôi tốt, độ bền cao\n►40% Polyester chống nhăn, giữ phom dáng tốt, hạn chế bám bụi.\n\nKiểu dáng:\n►Form Regular rộng thoáng, thoải mái khi vận động.\n\nChi tiết:\n►Màu sắc cơ bản dễ phối đồ, có 2 màu: Trắng, Ghi\n►Họa tiết phối màu ở phần vai áo tạo điểm nhấn trẻ trung, năng động.\n",
+      "id": 6
+    },
+    {
+      "name": "Áo Polo Cổ Đức Fitted Cotton 2001",
+      "price": 379,
+      "imgurl": "https://pos.nvncdn.net/be3159-662/ps/20230427_EEycg8ksEO.jpeg",
+      "description": "Chất liệu:\n►100% Cotton mềm mại, thấm hút mồ hôi tốt, độ bền cao\n\nKiểu dáng:\n►Form Fitted ôm vừa vặn, không quá bó, tôn lên vóc dáng người mặc.\n\nChi tiết:\n►Màu sắc cơ bản dễ phối đồ, có 3 màu cho bạn lựa chọn: Trắng, Đen, Be\n►Cổ và tay áo phối kẻ màu trẻ trung, năng động.\n►Đẹp hơn khi kết hợp cùng quần âu, quần Kaki, quần Short.",
+      "id": 7
+    },
+    {
+      "name": "Quần Jeans Loose Fit Cotton 6004",
+      "price": 519,
+      "imgurl": "https://pos.nvncdn.net/be3159-662/ps/20230520_FF1fWCZeoQ.jpeg",
+      "description": "Chất liệu:\n►100% Cotton mềm mại, thấm hút mồ hôi tốt, độ bền cao\n\nKiểu dáng:\n►Form Loose Fit ống suông, rộng thoáng, che khuyết điểm cơ thể, thoải mái khi vận động.\n\nChi tiết:\n►Màu sắc cơ bản dễ phối đồ, có 1 màu: Xanh đậm\n►Túi xỏ 2 bên trẻ trung, năng động\n►Đẹp hơn khi kết hợp cùng áo phông",
+      "id": 8
+    },
+    {
+      "name": "Quần Jeans Slim Cotton 6002 ",
+      "price": 457,
+      "imgurl": "https://pos.nvncdn.net/be3159-662/ps/20230419_6WzyZH7OlN.jpeg",
+      "description": " ►Đổi hàng trong vòng 5 ngày.\n\n ►Giảm đến 15% trên tổng hóa đơn khi mua hàng ( tại cửa hàng ) vào tháng sinh nhật.\n\n ►Giao hàng nội thành Hà Nội chỉ từ 15.000đ trong vòng 24 giờ.\n\n ►Tích điểm 3-8% giá trị đơn hàng cho mỗi lần mua và trừ tiền vào lần mua tiếp theo.",
+      "id": 9
+    },
+    {
+      "name": "Nguyễn Văn Hưng Híp234567",
+      "price": 123,
+      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230522_g42tD5On9O.jpeg",
+      "description": "đẹp nhắm",
+      "id": 10
+    }
+  ],
+  "user": [
+    {
+      "name": "Hưng",
+      "password": "1",
+      "email": "hn3399402@gmai.com",
+      "diachi": "hong",
+      "id": 1
+    },
+    {
+      "name": "loan",
+      "password": "1234",
+      "email": "loan@hi.com",
+      "diachi": "hong",
+      "id": 2
+    }
+  ]
+}

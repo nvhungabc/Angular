@@ -1,0 +1,27 @@
+  <form  (ngSubmit)="onHandleAdd()" class="border mx-60 my-10 p-10 rounded-lg">
+    <h2 class="">Thêm sản phẩm </h2>
+    <div class="form-group py-2">
+        <label for="exampleFormControlInput1">Tên sản phẩm</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+            [(ngModel)]="product.name" name="name">
+    </div>
+    <div class="form-group py-2">
+        <label for="exampleFormControlSelect1">Giá sản phẩm</label>
+        <input type="number" class="form-control" placeholder="name@example.com" [(ngModel)]="product.price"
+            name="price">
+    </div>
+    <div class="form-group py-2 ">
+        <label for="exampleFormControlSelect2">Ảnh minh họa</label>
+       <div class="grid grid-cols-2">
+        <input type="text" class="form-control h-10" id="exampleFormControlInput1" placeholder="name@example.com"
+        [(ngModel)]="product.imgurl" name="imgurl">
+        <img src="{{product.imgurl}}" class="w-40 h-auto ml-20">
+       </div>
+    </div>
+    <div class="form-group py-2">
+        <label for="exampleFormControlTextarea1">Mô tả sản phẩm</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" [(ngModel)]="product. description"
+            name=" description"></textarea>
+    </div>
+    <button type="submit"  class="btn btn-outline-success">Submit</button>
+  </form>

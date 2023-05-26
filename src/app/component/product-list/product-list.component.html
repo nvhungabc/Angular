@@ -1,0 +1,55 @@
+<div class="container">
+    <a routerLink="add"  class="btn btn-outline-success">Thêm mới</a>
+    <h1>Quản lý sản phẩm</h1>
+    <div class="space-y-2">
+      <details class="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between gap-2 bg-white p-2 text-gray-900 transition">
+              <span class="text-sm font-medium"> Lọc theo giá </span>
+          </summary>
+          <div class="border-t border-gray-200 bg-white">
+              <ul class="space-y-1 border-t border-gray-200 p-2">
+                  <li>
+                      <label for="FilterInStock" class="inline-flex items-center gap-2">
+                          <input type="checkbox" id="FilterInStock" class="h-5 w-5 rounded border-gray-300" (click)="sortProductsByPrice()"/>
+                          <span class="text-sm font-medium text-gray-700">
+                              <button type="button" >Giá sản phẩm tăng dần</button>
+                          </span>
+                      </label>
+                  </li>
+  
+                  <li>
+                      <label for="FilterPreOrder" class="inline-flex items-center gap-2">
+                          <input type="checkbox" id="FilterPreOrder" class="h-5 w-5 rounded border-gray-300" (click)="sortProductsByPricee()" />
+                          <span class="text-sm font-medium text-gray-700">
+                              <button type="button" >Giá sản phẩm giảm dần</button>
+                          </span>
+                      </label>
+                  </li>
+              </ul>
+          </div>
+      </details>
+  </div>
+    <hr />
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          app-product-item
+          *ngFor="let product of products; let i = index"
+          [product]="product"
+          [index]="i"
+          (onRemove)="removeItem(product.id)"
+        ></tr>
+      </tbody>
+    </table>
+  </div>
+  <hr />

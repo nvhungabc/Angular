@@ -1,0 +1,56 @@
+<div class="">
+    <img src="https://pos.nvncdn.net/f4d87e-8901/bn/20230515_AEGKVzMT.jpeg" class="">
+</div>
+<div class="space-y-2">
+    <details class="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex cursor-pointer items-center justify-between gap-2 bg-white p-2 text-gray-900 transition">
+            <span class="text-sm font-medium"> Lọc theo giá </span>
+        </summary>
+        <div class="border-t border-gray-200 bg-white">
+            <ul class="space-y-1 border-t border-gray-200 p-2">
+                <li>
+                    <label for="FilterInStock" class="inline-flex items-center gap-2">
+                        <input type="checkbox" id="FilterInStock" class="h-5 w-5 rounded border-gray-300"
+                            (click)="sortProductsByPrice()" />
+                        <span class="text-sm font-medium text-gray-700">
+                            <button type="button">Giá sản phẩm tăng dần</button>
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label for="FilterPreOrder" class="inline-flex items-center gap-2">
+                        <input type="checkbox" id="FilterPreOrder" class="h-5 w-5 rounded border-gray-300"
+                            (click)="sortProductsByPricee()" />
+                        <span class="text-sm font-medium text-gray-700">
+                            <button type="button">Giá sản phẩm giảm dần</button>
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+<div class="grid grid-cols-4 gap-4" *ngIf="products && products.length; else elseBlock">
+    <div class="m-10" *ngFor="let product of products">
+        <a class="block rounded-lg p-3 shadow-sm shadow-indigo-100 no-underline" routerLink="products/{{product.id}}">
+            <img alt="Home" src="{{product.imgurl}}" class="h-auto w-full rounded-md object-cover" />
+            <div class="mt-1">
+                <div>
+                    <div>
+                        <p class="text-base text-red-500 ">{{product.price}}.$</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-600">{{product.name}}</p>
+                    </div>
+                </div>
+                <!-- <div class="mt-5 text-center">
+                    <button type="" class="btn btn-outline-secondary">Xem Chi Tiết</button>
+                </div> -->
+            </div>
+        </a>
+    </div>
+</div>
+<ng-template #elseBlock>
+    Không tìm thấy sản phẩm!
+</ng-template>
