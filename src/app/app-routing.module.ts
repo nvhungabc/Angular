@@ -15,6 +15,8 @@ import { LayoutsUserComponent } from './layouts/layouts-user/layouts-user.compon
 import { GioithieuComponent } from './pages/gioithieu/gioithieu.component';
 import { ThongtinComponent } from './pages/thongtin/thongtin.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { ProductListUserComponent } from './component/product-list-user/product-list-user.component';
+import { TintucComponent } from './layouts/tintuc/tintuc.component';
 const routes: Routes = [
   {
     path: '',
@@ -25,6 +27,7 @@ const routes: Routes = [
       { path: 'resgister', component: ResgisterComponent },
       { path: 'gioithieu', component: GioithieuComponent },
       { path: 'thongtin', component: ThongtinComponent },
+      { path: 'tintuc', component: TintucComponent },
       { path: 'products/:id', component: ProductDetailComponent },
       { path: 'products/:id/cart', component: CartComponent },
     ],
@@ -35,6 +38,7 @@ const routes: Routes = [
     children: [
       { path: '', component: DashbroadComponent },
       { path: 'products', component: ProductListComponent },
+      { path: 'user', component: ProductListUserComponent},
       { path: "products/add", component: ProductAddComponent },
       { path: 'products/:id/edit', component: ProductEditComponent },
     ]

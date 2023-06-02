@@ -1,34 +1,31 @@
 import { Component } from '@angular/core';
 import { IProduct } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
+import { FormControl } from '@angular/forms';
+import { startWith, map } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  status: boolean = false;
-  productName = "";
-  products: IProduct[] = []
-  product!: IProduct;
+  searchControl = new FormControl();
+  items: string[] = []; 
   constructor(private productService: ProductService) {
-    this.productService.getProducts().subscribe(data => {
-      this.products = data
-    })
+    this.loadItems(); // Gọi phương thức để tải danh sách sản phẩm khi component được khởi tạo
   }
-  getValue(e: any) {
-    this.productName = e.target.value;
+  loadItems() {
+    this.productService.getProducts().subscribe((products: any[]) => {
+      // Lấy tất cả dữ liệu từ trường name của danh sách sản phẩm
+      this.items = products.map((product: any) => product.name);
+    });
   }
-  changeStatus() {
-    this.status = !this.status;
+  filteredItems$ = this.searchControl.valueChanges.pipe(
+    startWith(''),
+    map(value => this.filterItems(value))
+  );
+
+  filterItems(value: string): string[] {
+    return this.items.filter(item => item.toLowerCase().includes(value.toLowerCase()));
   }
-  searchProductsByName() {
-    if (this.productName !== "") {
-      this.products = this.products.filter(product => product.name.toLowerCase().includes(this.productName.toLowerCase()));
-    }
-  }
-  
-  
-  
-  
 }

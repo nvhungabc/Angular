@@ -1,6 +1,12 @@
 <div class="">
     <img src="https://pos.nvncdn.net/f4d87e-8901/bn/20230515_AEGKVzMT.jpeg" class="">
 </div>
+<div class="relative">
+    <label class="sr-only" for="search"> Search </label>
+    <input class="h-10 w-full ml-10 rounded-full border-none bg-white pe-10 ps-9 text-sm shadow-sm sm:w-56 pl-10"
+        id="search" type="text" placeholder="Tìm kiếm" [formControl]="searchControl" />
+    <li *ngFor="let item of filteredItems$ | async">{{ item }}</li>
+</div>
 <div class="space-y-2">
     <details class="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden">
         <summary class="flex cursor-pointer items-center justify-between gap-2 bg-white p-2 text-gray-900 transition">
@@ -44,12 +50,12 @@
                         <p class="font-medium text-gray-600">{{product.name}}</p>
                     </div>
                 </div>
-                <!-- <div class="mt-5 text-center">
-                    <button type="" class="btn btn-outline-secondary">Xem Chi Tiết</button>
-                </div> -->
             </div>
         </a>
     </div>
+</div>
+<div class="">
+    <img src="https://pos.nvncdn.net/f4d87e-8901/bn/20230328_uH3ONdyl.jpeg" class="">
 </div>
 <ng-template #elseBlock>
     Không tìm thấy sản phẩm!

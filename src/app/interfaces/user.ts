@@ -1,7 +1,7 @@
-export interface User{
+export interface User {
     name: string;
     password: string;
     email: string;
-    diachi:string;
-
+    diachi: string;
+    id: string;
 }

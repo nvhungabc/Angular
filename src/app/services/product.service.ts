@@ -10,6 +10,7 @@ import { User } from '../interfaces/user';
 
 
 export class ProductService {
+  private apiUrl = 'http://localhost:3000/user/';
   constructor(private http: HttpClient) { }
 
 
@@ -30,5 +31,14 @@ export class ProductService {
   }
   resgister(use: User): Observable<User> {
     return this.http.post<User>('http://localhost:3000/user', use);
+  }
+  getProductsUser(): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:3000/user');
+  }
+  deleteProductUser(id: number | string): Observable<User> {
+    return this.http.delete<User>('http://localhost:3000/user/' + id);
+  }
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:3000/user/');
   }
 }
