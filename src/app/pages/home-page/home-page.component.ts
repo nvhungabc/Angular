@@ -10,9 +10,9 @@ import { startWith, map } from 'rxjs/operators';
 })
 export class HomePageComponent {
   status: boolean = false;
-  productName = "";
   products: IProduct[] = []
   product!: IProduct;
+
   constructor(private productService: ProductService) {
     this.productService.getProducts().subscribe(data => {
       this.products = data
@@ -41,4 +41,10 @@ export class HomePageComponent {
   filterItems(value: string): string[] {
     return this.items.filter(item => item.toLowerCase().includes(value.toLowerCase()));
   }
+  //thông tin người đăng nhập
+  // ngOnInit() {
+  //   // Lấy thông tin đăng nhập từ authService
+  //   this.name = this.productService.getUsers();
+  // }
+  
 }

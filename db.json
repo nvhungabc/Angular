@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "name": "Áo phông S.L.L.3.3997",
-      "price": 122222,
-      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230405_ODP1BPRd7f.jpeg",
-      "description": "\n- Được kiểm tra hàng trước khi nhận hàng\n- Đổi hàng trong vòng 30 ngày kể từ khi nhận hàng\n- Không áp dụng đổi/trả sản phẩm trong CTKM\n- Miễn phí đổi trả nếu lỗi sai sót từ phía atino.vn",
-      "id": 2
-    },
-    {
       "name": "Quần short R.L.1.1688",
       "price": 230,
       "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230522_VMcAICDNnK.jpeg",
@@ -78,13 +71,6 @@
       "id": 13
     },
     {
-      "name": "Dép Lê EVA 2.9808 Sale",
-      "price": 39,
-      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230330_PNUMTwszz4.jpeg",
-      "description": "- Đổi hàng trong vòng 30 ngày kể từ khi nhận hàng\n- Không áp dụng đổi/trả sản phẩm trong CTKM\n- Miễn phí đổi trả nếu lỗi sai sót từ phía atino.vn",
-      "id": 14
-    },
-    {
       "name": "Giày Boots 9806",
       "price": 595000,
       "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230207_JCQzqZg4mxBZF0N0.jpeg",
@@ -120,6 +106,31 @@
       "email": "Hung@xn--dfghj-wqa",
       "diachi": "Hà nội",
       "id": 6
+    },
+    {
+      "name": "Nguyễn Văn Hưng",
+      "password": "123456",
+      "email": "hn3399402@gmail.com",
+      "diachi": "Hà nội",
+      "id": 8
+    }
+  ],
+  "cartItems": [
+    {
+      "name": "Túi Chéo 1.9348",
+      "price": 245000,
+      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230401_ghBpRzERFJ.jpeg",
+      "description": "Chất liệu: Da PU Cao Cấp\n\nKích Thước: 15x32x3cm",
+      "id": 12,
+      "quantity": 1
+    },
+    {
+      "name": "Quần âu ",
+      "price": 600,
+      "imgurl": "https://pos.nvncdn.net/f4d87e-8901/ps/20230405_ODP1BPRd7f.jpeg",
+      "description": "\n- Được kiểm tra hàng trước khi nhận hàng\n- Đổi hàng trong vòng 30 ngày kể từ khi nhận hàng\n- Không áp dụng đổi/trả sản phẩm trong CTKM\n- Miễn phí đổi trả nếu lỗi sai sót từ phía atino.vn",
+      "id": 4,
+      "quantity": 1
     }
   ]
 }

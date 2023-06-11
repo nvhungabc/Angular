@@ -1,27 +1,41 @@
-  <form  (ngSubmit)="onHandleAdd()" class="border mx-60 my-10 p-10 rounded-lg">
+  <form  (ngSubmit)="onHandleAdd()" class="border mx-60 my-10 p-10 rounded-lg" [formGroup]="myForm" >
     <h2 class="">Thêm sản phẩm </h2>
     <div class="form-group py-2">
         <label for="exampleFormControlInput1">Tên sản phẩm</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
-            [(ngModel)]="product.name" name="name">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tên sản phẩm"
+            [(ngModel)]="product.name" name="name" formControlName="name">
+            <div *ngIf="myForm?.get('name')?.invalid && myForm?.get('name')?.touched">
+                <div *ngIf="myForm?.get('name')?.hasError('required')" class="text-red-500">Tên sản phẩm không được để trống </div>
+              </div>
     </div>
     <div class="form-group py-2">
         <label for="exampleFormControlSelect1">Giá sản phẩm</label>
-        <input type="number" class="form-control" placeholder="name@example.com" [(ngModel)]="product.price"
+        <input type="number" class="form-control" placeholder="Giá sản phẩm" [(ngModel)]="product.price" formControlName="price"
             name="price">
+            <div *ngIf="myForm?.get('price')?.invalid && myForm?.get('price')?.touched">
+                <div *ngIf="myForm?.get('price')?.hasError('required')" class="text-red-500">Giá không được để
+                  trống</div>
+                <div *ngIf="myForm?.get('price')?.hasError('min')" class="text-red-500">Giá không thể âm</div>
+              </div>
     </div>
     <div class="form-group py-2 ">
         <label for="exampleFormControlSelect2">Ảnh minh họa</label>
        <div class="grid grid-cols-2">
-        <input type="text" class="form-control h-10" id="exampleFormControlInput1" placeholder="name@example.com"
-        [(ngModel)]="product.imgurl" name="imgurl">
+        <input type="text" class="form-control h-10" id="exampleFormControlInput1" placeholder="http/......"
+        [(ngModel)]="product.imgurl" name="imgurl" formControlName="imgurl">
         <img src="{{product.imgurl}}" class="w-40 h-auto ml-20">
        </div>
+       <div *ngIf="myForm?.get('imgurl')?.invalid && myForm?.get('imgurl')?.touched">
+        <div *ngIf="myForm?.get('imgurl')?.hasError('required')" class="text-red-500">Link ảnh không được để trống </div>
+      </div>
     </div>
     <div class="form-group py-2">
         <label for="exampleFormControlTextarea1">Mô tả sản phẩm</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" [(ngModel)]="product. description"
-            name=" description"></textarea>
+            name=" description" formControlName="description"></textarea>
     </div>
+    <div *ngIf="myForm?.get('description')?.invalid && myForm?.get('description')?.touched">
+        <div *ngIf="myForm?.get('description')?.hasError('required')" class="text-red-500">Mô tả không được để trống </div>
+      </div>
     <button type="submit"  class="btn btn-outline-success">Submit</button>
   </form>

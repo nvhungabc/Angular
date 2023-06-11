@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IProduct } from '../interfaces/product';
 import { User } from '../interfaces/user';
-
+import { Cart } from '../interfaces/cart';
 @Injectable({
   providedIn: 'root'
 })
 
 
 export class ProductService {
-  private apiUrl = 'http://localhost:3000/user/';
+  private apiUrl = 'http://localhost:3000/cartItems';
   constructor(private http: HttpClient) { }
 
 
@@ -39,6 +39,16 @@ export class ProductService {
     return this.http.delete<User>('http://localhost:3000/user/' + id);
   }
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:3000/user/');
+    return this.http.get<User[]>('http://localhost:3000/user');
   }
+  addToCart(product: any): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/cartItems', product);
+  }
+  getcart(): Observable<Cart[]> {
+    return this.http.get<Cart[]>('http://localhost:3000/cartItems');
+  }
+  deletecart(id: number | string): Observable<Cart> {
+    return this.http.delete<Cart>('http://localhost:3000/cartItems/' + id);
+  }
+  
 }

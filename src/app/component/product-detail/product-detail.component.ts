@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { IProduct } from 'src/app/interfaces/product';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
-
+import { Cart } from 'src/app/interfaces/cart';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -27,4 +27,15 @@ export class ProductDetailComponent {
       },
     );
   }
+  //cart
+  addToCart() {
+    this.productService.addToCart(this.product).subscribe(
+      (response) => {
+        console.log('Product added to cart:', response);
+      },
+      (error) => {
+        console.error('Error adding product to cart:', error);
+      }
+    );
+} 
 }

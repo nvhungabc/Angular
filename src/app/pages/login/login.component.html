@@ -8,7 +8,7 @@
                 eaque error neque ipsa culpa autem, at itaque nostrum!
             </p>
         </div>
-        <form action="" class="mx-auto mb-0 mt-8 max-w-md space-y-4" [formGroup]="myForm">
+        <form action="" (ngSubmit)="login()" class="mx-auto mb-0 mt-8 max-w-md space-y-4" [formGroup]="myForm">
             <div>
                 <label for="email" class="sr-only">Email</label>
                 <div class="relative">

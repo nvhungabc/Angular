@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class LayoutsAdminComponent {
   admin = {
-    email: "1",
-    password: "1"
+    email: "hung@gmail.com",
+    password: "123456"
   }
   loggedIn: boolean = false;
   showLoginForm: boolean = true;

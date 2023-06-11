@@ -2,7 +2,6 @@
   <div class="relative mx-auto max-w-screen-xl px-4 py-8 ">
     <div>
       <h1 class="text-2xl font-bold lg:text-3xl ml-10">{{ product.name }}
- 
       </h1>
     </div>
     <div class="grid gap-8 lg:grid-cols-4 lg:items-start ml-10">
@@ -151,7 +150,7 @@
             </p>
           </div>
           <button
-          routerLink="cart"
+          routerLink="cart"  (click)="addToCart()"
             class="w-full rounded bg-red-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white"
           >
             Add to cart
